@@ -3,7 +3,7 @@ Virtual Environments
 
 가상환경(Virtual Environments)이란 자신이 원하는 Python 환경을 구축하기 위해 필요한 모듈만 담아 놓은 바구니라고 생각하면 됩니다.   
 
-<img src="C:\Users\Yonguk\Git\img" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>   
+<img src="https://user-images.githubusercontent.com/26195706/92327317-b540c100-f093-11ea-90f0-6854c99b9e66.png"></img> 
 
 즉 위 사진 상단의 Python Virtual Envs처럼 각 가상환경 (virtualenv1, 2, 3...)은 독립적으로 관리됩니다. 각 모듈은 다른 모듈에 대한
 의존성(dependency)이 다르기 때문에 마구잡이로 설치하다보면 이유 모를 충돌이 날 수도 있습니다. 따라서 각 프로젝트 별로 별개의 가상환경을
