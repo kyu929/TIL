@@ -13,3 +13,10 @@ Virtual Environments
 마련하고자 할 때나, GitHub 등의 저장소나 네트워크와 연계하고자 할 때 등으로 매우 다양합니다.
 
 Python에서 가상환경을 만드는 방법은 크가지 2가지로 vituralenv와 conda를 사용합니다.
+
+* PowerShell
+가상환경을 구축 후 activate.bat이 아니라 activate.ps1를 실행해야 한다.
+이 때 권한 문제로 오류가 뜰 수 있다. 권한 문제는 Powershell은 문제로 스크립트를 허용하지 않는다. 해결책은 Powershell 관리자 모드로 실행 후, 
+```Set-ExecutionPolicy Unrestricted``` 커맨드를 실행하면 virtualenv가 잘 실행된다. 보안 오류의 문제는 해결되지만, Powershell 보안정책
+을 꺼둔 것이므로, 주의해야한다.
+또 다른 방법은 cmd로 변경 후 activate.bat을 실행하는 방법도 있다.
