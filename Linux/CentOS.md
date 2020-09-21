@@ -18,3 +18,4 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0
  NETMASK=255.255.255.0
  GATEWAY=GATEWAY
 ```
+selinux
