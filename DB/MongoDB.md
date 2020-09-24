@@ -34,3 +34,11 @@ vi /etc/mongod.conf (CentOS)
 bind_ip=127.0.0.1 -> bind_ip=ip_addr1, ip_addr2 or bind_ip=0.0.0.0 (외부 ip 모두 허용)  
 mongod 재실행  
 netstat -tnlp로 포트 바인딩 확인
+  
+* MongoDB Index  
+MongoDB에서 Index는 쿼리의 효율적인 실행을 지원한다. 인덱스가 없으면 MongoDB는 쿼리문과 일치하는 문서를 선택하기 위해 컬렉션 스캔, 즉 컬렉션의 모든 문서를 스캔해야합니다.
+쿼리에 적합한 인덱스가 있는 경우 MongoDB는 인덱스를 사용하여 검사해야하는 문서 수를 제한할 수 있습니다. 인덱스는 컬렉션 데이터 세트의 작은 부분을 탐색하기 쉬운 형식으로 저장하는
+특수 데이터 구조입니다.
+  
+  
+reference : docs.mongodb.com/manual
