@@ -40,7 +40,7 @@ db.createUser({user:'username', pwd:'pwd', roles:['userAdminAnyDatabase', 'dbAdm
 
 사용자 계정 및 권한 추가
 use database
-db.createUser({user:'username', pwd:'pwd', roles:['dbAdmin', 'readWrite'})
+db.createUser({user:'username', pwd:'pwd', roles:['dbAdmin', 'readWrite']})
 ```   
 * MongoDB 원격 접속 설정  
 MongoDB 설정 파일에서 접속 허용 아이피 변경  
