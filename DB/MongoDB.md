@@ -36,7 +36,7 @@ db.createUser()로 사용자 추가 사용자 권한은 https://docs.mongodb.com
 #example
 관리자 계정 및 권한 추가
 use admin
-db.createUser({user:'username', pwd:'pwd", roles:['userAdminAnyDatabase', 'dbAdminAnyDatabase', 'readWriteAnyDatabase']})
+db.createUser({user:'username', pwd:'pwd', roles:['userAdminAnyDatabase', 'dbAdminAnyDatabase', 'readWriteAnyDatabase']})
 
 사용자 계정 및 권한 추가
 use database
