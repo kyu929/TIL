@@ -23,11 +23,25 @@ ObjectId로 조회
 
    
 * authorization 추가  
+vi /etc/mongod.conf
+```
+security:
+    authorization
+```
 관리자 계정 생성하기  
 MongoDB Shell에 접속  
 admin 데이터베이스에 접속 -> use admin  
 db.createUser()로 사용자 추가 사용자 권한은 https://docs.mongodb.com/manual/reference/built-in-roles/ 에서 확인가능.
-   
+```
+#example
+관리자 계정 및 권한 추가
+use admin
+db.createUser({user:'username', pwd:'pwd", roles:['userAdminAnyDatabase', 'dbAdminAnyDatabase', 'readWriteAnyDatabase']})
+
+사용자 계정 및 권한 추가
+use database
+db.createUser({user:'username', pwd:'pwd', roles:['dbAdmin', 'readWrite'})
+```   
 * MongoDB 원격 접속 설정  
 MongoDB 설정 파일에서 접속 허용 아이피 변경  
 vi /etc/mongod.conf (CentOS)  
