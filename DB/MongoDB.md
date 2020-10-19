@@ -6,7 +6,7 @@ MongoDB
 2. mongo (mongo shell 실행)   
 
 
-### mongodb find 조회
+## mongodb find 조회
 
  
 >collection 전체 조회  
@@ -42,15 +42,47 @@ db.createUser({user:'username', pwd:'pwd', roles:['userAdminAnyDatabase', 'dbAdm
 사용자 계정 및 권한 추가
 use database
 db.createUser({user:'username', pwd:'pwd', roles:['dbAdmin', 'readWrite']})
-```   
-* MongoDB 원격 접속 설정  
+```  
+## MongoDB Collection 수정  
+```
+db.collection.update(
+  <query>,
+  <update>
+)
+
+#example
+
+db.test.update(
+  {'sid': 's0'},
+  {'sid': 's0000', 'score': 95}
+);  
+
+'sid'가 s0인 document를 찾아서, 'sid' 를 s0000으로 변경, 'score' field값을 95로 수정하라는 의미이다. 이때 기본적인 update 연
+산은 해당 문서를 교체하는 것을 의미한다. 즉, 기존의 문서가 지워지고 <update> 매개변수에 작성한 문서가 대체됨을 나타낸다.
+
+특정필드만 변경( $set)
+
+#example
+db.test.update(
+  {'sid':'s1'},
+  { $set : { 'socre': 100 } }
+);
+
+특정필드 제거( $unset )
+db.test.update(
+  {'sid': 's8'},
+  { $unset: { 'score': 80 } }
+);
+```
+
+## MongoDB 원격 접속 설정  
 MongoDB 설정 파일에서 접속 허용 아이피 변경  
 vi /etc/mongod.conf (CentOS)  
 bind_ip=127.0.0.1 -> bind_ip=ip_addr1, ip_addr2 or bind_ip=0.0.0.0 (외부 ip 모두 허용)  
 mongod 재실행  
 netstat -tnlp로 포트 바인딩 확인
   
-* MongoDB Index  
+## MongoDB Index  
 MongoDB에서 Index는 쿼리의 효율적인 실행을 지원한다. 인덱스가 없으면 MongoDB는 쿼리문과 일치하는 문서를 선택하기 위해 컬렉션 스캔, 즉 컬렉션의 모든 문서를 스캔해야합니다.
 쿼리에 적합한 인덱스가 있는 경우 MongoDB는 인덱스를 사용하여 검사해야하는 문서 수를 제한할 수 있습니다. 인덱스는 컬렉션 데이터 세트의 작은 부분을 탐색하기 쉬운 형식으로 저장하는
 특수 데이터 구조입니다.
