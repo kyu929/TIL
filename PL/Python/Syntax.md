@@ -39,3 +39,46 @@ True
 True
 False
 ```
+
+### 3. super()
+
+서브 클래스에서 슈퍼 클래스의 메소드에 액세스 할 수 있습니다.
+
+```
+--------------------example------------------------
+#Super Class Rectangle
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+        
+    def perimeter(self):
+        return 2 * self.length + 2 * self.width
+
+# Sub Class Squre
+# Here we declare that the Square class inherits from the Rectangle class
+class Squre(Rectangle):
+    def __init__(self, length):
+        super().__init__(length, length)
+```
+  
+다른 객체 지향 언어와 마찬가지로 하위 클래스에서 슈퍼 클래스의 메서드를 호출 할 수 있습니다. 주요 사용 사례는 상속된 메서드의 기능을 확장하는 것입니다.
+example. Sqaure에서 상속하는 Class Cube를 생성하여 .area()의 기능을 확장할 수 있다.
+```
+--------------------example------------------------
+class Square(Rectangle):
+    def __init__(self, length):
+        super().__init__ (length, length)
+        
+class Cube(Squre):
+    def surface_Area(self):
+        face_Area = super().area()
+        return face_area *6
+        
+    def volume(self):
+        face_area = super().area()
+        return face_Area * self.length
+```
