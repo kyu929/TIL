@@ -82,3 +82,51 @@ class Cube(Squre):
         face_area = super().area()
         return face_Area * self.length
 ```
+
+### 4. f-string
+
+1. syntax
+f-string 문은 두 부분으로 구성됩니다. 하나는 문자 f 또는 F이고 다음 부분은 형식화하려는 문자열 입니다. 문자열은 작은 따옴표, 큰 따옴표 또는 삼중 따옴표로 묶입니다.
+
+```
+example
+f'string' or F'string' or f''string'' or f'''string'''
+```
+
+2. variables
+str.format() 메서드를 사용하여 문자열 형식을 지정할 수도 있습니다. f-string으로 더 빠르게 문자열 형식을 지정할 수 있습니다.
+변수의 경우 중괄호{} 안에 넣어 표시할 수 있습니다.
+
+```
+example
+var1 = "variable"
+var2 = 123
+print(f"Hi {var1} today number {var2}")
+```
+
+3. expression
+중괄호{} 안에 함수 호출도 가능하다.
+
+```
+example
+def greet(name):
+    return "Hello, " + name
+
+
+name = "Name"
+print(f"{greet(name)}")
+```
+같은 방식으로 미리 정의 된 메서드를 호출 할 수도 있습니다.
+
+4. dictionaries
+f-string 내부에 dictionary key를 사용할 때 서로 다른 따옴표를 사용해야 한다.
+```
+example
+person = {"name": "John", "age": 19}
+print(f"{person['name']} is {person['age']} years old.")
+```
+
+
+
+
+
