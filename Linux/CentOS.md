@@ -1,8 +1,8 @@
-CentOS
+CentOS 7.0
 =====================
-* ip 설정
-네트워크 설정파일 수정 
-vi /etc/sysconfig/network-scripts/ifcfg-eth0
+### ● ip 설정
+#### 네트워크 설정파일 수정
+#### vi /etc/sysconfig/network-scripts/ifcfg-eth0 (ifcfg-eth0의 경우 eth의 뒤에 숫자는 다를 수 있음)
 
 ```
 네트워크 디바이스 설정
@@ -19,3 +19,8 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0
  GATEWAY=GATEWAY
 ```
 selinux
+
+### ● /usr/local/lib과 /usr/lib의 차이점
+  
+/usr/local/lib 은 사용자가 직접 설치 (컴파일)한 libs를 의미한다.
+/usr/lib 은 배포판에서 제공하는 라이브러리 용이다.
