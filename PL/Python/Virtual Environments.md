@@ -26,6 +26,7 @@ To create a virtual environment, decide upon a directory where you want to place
 ```python3 -m venv name-env or python -m venv name-env```
 
 On Windows, run:  
-```name-env\Scripts\activate.bat```
+```name-env\Scripts\activate.bat```  
+  
 On Unix or MacOS, run:  
-```source name-env\bin\activate```
+```source name-env\bin\activate```  
