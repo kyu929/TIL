@@ -27,6 +27,8 @@ To create a virtual environment, decide upon a directory where you want to place
 
 On Windows, run:  
 ```name-env\Scripts\activate.bat```  
+If you used Windows PowerShell run:  
+```name-env\Scripts\activate.ps1```  
   
 On Unix or MacOS, run:  
 ```source name-env\bin\activate```  
