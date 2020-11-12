@@ -59,3 +59,10 @@ HTTP 세션은 해당 서버에 접근한 클라이언트를 식별하는 방법
  ● 쿠키를 사용하여 세션 ID 값을 클라이언트에 전송한다.
  ● 웹 브라우저가 종료되면 세션 쿠키를 삭제한다.
 ```
+
+### ● Suspense
+```
+Suspense lets your components "wait" for something before they can render. In this example, two components wait for an asynchronous
+API call to fetch some data
+```
+```
