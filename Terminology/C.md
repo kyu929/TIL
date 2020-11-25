@@ -1,6 +1,10 @@
 Letter C
 ==========
 
+## Index
+   * [CGI](#CGI)
+
+
 ### ● CGI(Common Gateway Interface)
 ```
 CGI는 특별한 라이브러리나 도구를 의미하는 것이 아니고, 별도로 제작된 웹서버와 프로그램간의 교환방식이다. 
