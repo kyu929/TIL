@@ -2,7 +2,7 @@ Letter C
 ==========
 
 ## Index
-   * [CGI](#CGI(Common-Gateway-Interface))
+   * [CGI](#cgicommon-gateway-interface)
    * [Cookie](#Cookie)
 
 * ### CGI(Common Gateway Interface)
