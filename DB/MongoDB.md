@@ -20,6 +20,9 @@ MongoDB
 >  
 >조건 여러개로 조회  
 >```db.getCollection('collection_name').find({"korean":"사이즈", "english":"size"})```  (이후 정확한 명칭으로 변경)
+>
+>Json Data안에 Data 죄회
+>db.collection.find({"data.exp":{}})
 
    
 ## authorization 추가  
