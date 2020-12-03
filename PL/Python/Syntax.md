@@ -131,7 +131,35 @@ print(f"{person['name']} is {person['age']} years old.")
 shallow copy  vs  deep copy
 
 
+   ### 5. Descriptor in Python
+   In general, a descriptor is an object atribute with "binding behavior", one whose attribute access has been overridden by methods in the descriptor protocol: __get__(), 
+__set__(), and __delete__(). If any of those methods are defined for an object, it is said to be a descriptor.
 
 
-
-
+   ### 6. self
+   The word 'self' is used to represent the instance of a class. By using the "self" keyword we access the attributes and methods of the class in Python.
+   
+   #### __init__ method
+   "__init__" is a reseved method in python classes. It is called as a constructor in object oriented terminology. This method is called when an object is created from a class
+and it allows the class to initialize the attributes of the class.
+   Example
+```
+   class Rectangle:
+       def __init__(self, length, breadth, unit_cost=0):
+           self.length = length
+           self.breadth = breadth
+           self.unit_cost = unit_cost
+       def get_area(self):
+           return self.length * self.breadth
+       def cacluate_cost(self):
+           area = self.get_area()
+           return area * self.unit_cost
+    # breadth = 120 units, length = 160 units, 1 sq unit cost = Rs 2000
+    r = Rectangle(160, 120, 2000)
+    print("Area of Rectangle: %s sq units" % (r.get_area()))
+ ```
+ Output    
+ ```
+    Area of Rectangle: 19200 sq units
+    Cost of rectangular field: Rs.38400000
+ ```
