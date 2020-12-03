@@ -134,6 +134,8 @@ shallow copy  vs  deep copy
    ### 5. Descriptor in Python
    In general, a descriptor is an object atribute with "binding behavior", one whose attribute access has been overridden by methods in the descriptor protocol: __get__(), 
 __set__(), and __delete__(). If any of those methods are defined for an object, it is said to be a descriptor.
+  
+  ###### reference : https://docs.python.org/3/howto/descriptor.html
 
 
    ### 6. self
