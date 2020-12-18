@@ -30,3 +30,6 @@ selinux
  한 페이지씩 이동 : ctrl + u, ctrl + d (u = up | d = down)
  이전 작업으로 이동 : u
  
+### - Apache 자식 프로세서 생성 이유
+
+reference : https://byd0105.tistory.com/24
