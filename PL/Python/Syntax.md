@@ -165,3 +165,6 @@ and it allows the class to initialize the attributes of the class.
     Area of Rectangle: 19200 sq units
     Cost of rectangular field: Rs.38400000
  ```
+ 
+ 
+ 6. multiprocessing
