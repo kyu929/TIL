@@ -19,6 +19,10 @@ CentOS 7.0
  GATEWAY=GATEWAY
  DNS1=DNS_ADDR(8.8.8.8)
 ```
+파일 수정 후 
+```
+systemctl restart NetworkManager
+```
 selinux
 
 ### ● /usr/local/lib과 /usr/lib의 차이점
