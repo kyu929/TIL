@@ -25,19 +25,27 @@ systemctl restart NetworkManager
 ```
 selinux
 
+---------------------------------------------
+
 - ### /usr/local/lib과 /usr/lib의 차이점
-  
+
 /usr/local/lib 은 사용자가 직접 설치 (컴파일)한 libs를 의미한다.
 /usr/lib 은 배포판에서 제공하는 라이브러리 용이다.
 
- - ### VIM Editor
 -------------------------------------------------
+
+ - ### VIM Editor
+
  한 페이지씩 이동 : ctrl + u, ctrl + d (u = up | d = down)
  이전 작업으로 이동 : u
+ 
+-------------------------------------------------
  
 - ### Apache 자식 프로세서 생성 이유
 
 reference : https://byd0105.tistory.com/24
+
+------------------------------------------------
 
 - ### Apache
 
@@ -50,3 +58,4 @@ reference : https://byd0105.tistory.com/24
 $ firewall-cmd --permanent --zone=public --add-port=80/tcp
 $ firewall-cmd --reload
 ```
+---------------------------------------------------
