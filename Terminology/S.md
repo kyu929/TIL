@@ -65,4 +65,17 @@ HTTP 세션은 해당 서버에 접근한 클라이언트를 식별하는 방법
 Suspense lets your components "wait" for something before they can render. In this example, two components wait for an asynchronous
 API call to fetch some data
 ```
+
+- ### Symbolic link
+```
+Apache Config 중 
+<Directory />
+    Options FollowSymLinks
+    Require all granted
+</Directory>
+에서 FollowSymLinks 검색 도중 SymLinks가 무엇인지 궁금하여 찾아 보게됨.
+
+In computing, a symbolic link(also symlink or soft link) is a term for any file that contains a reference to another file or directory
+in the form of an absolute or relative path and that affects pathname resolution.
+
 ```
