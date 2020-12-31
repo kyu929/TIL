@@ -92,3 +92,10 @@ MongoDB에서 Index는 쿼리의 효율적인 실행을 지원한다. 인덱스�
   
   
 reference : docs.mongodb.com/manual
+
+## MongoDB Insert
+db.collection.insert()
+```
+#example
+db.collection.insert({"key":"value", "key":{"key":"value", "key":["1","2"]}});
+```
