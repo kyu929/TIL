@@ -1,28 +1,48 @@
 CentOS 7.0
 =====================
+
+----------------------------------------------------------------------------------------
+## CentOS 초기설정
+
 - ### ip 설정
 #### 네트워크 설정파일 수정
-#### vi /etc/sysconfig/network-scripts/ifcfg-eth0 (ifcfg-eth0의 경우 eth의 뒤에 숫자는 다를 수 있음)
 
 ```
+$ vi /etc/sysconfig/network-scripts/ifcfg-eth0 (ifcfg-eth0의 경우 eth의 뒤에 숫자는 다를 수 있음)
+
 네트워크 디바이스 설정
 
- DEVICE=eth0
- HWADDR=HWADDR
  TYPE= Ethernet
- UUID=UUID-UUID-UUID-UUID
- ONBOOT=yes
- NM_CONTROLLED="yes"
+ PROXY_METHOD=none
+ BROWSER_ONLY=no
  BOOTPROTO=static
- IPADDR=IPADDR
+ DEFROUTE=yes
+ IPV4_FAILURE_FATAL=no
+ IPV6INIT=no
+ IPV6_AUTOCONF=yes
+ IPV6_DEFROUTE=yes
+ IPV6_FAILURE_FATAL=no
+ IPV6_ADDR_GEN_MODE=stable-privacy
+ NAME=ens160
+ UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ DEVICE=ens160 
+ ONBOOT=yes
+ IPADDR=xxx.xx.xxx.xx(IP_ADDRESS)
  NETMASK=255.255.255.0
  GATEWAY=GATEWAY
  DNS1=DNS_ADDR(8.8.8.8)
+ 
+$ systemctl restart NetworkManager
 ```
-파일 수정 후 
-```
-systemctl restart NetworkManager
-```
+
+   - ### Update
+   ```
+   $ yum update
+   
+   $ sudo yum update (root권한이 아닐 경우)
+   ```
+
+
 selinux
 
 ---------------------------------------------
@@ -59,3 +79,10 @@ $ firewall-cmd --permanent --zone=public --add-port=80/tcp
 $ firewall-cmd --reload
 ```
 ---------------------------------------------------
+
+- ### Command
+
+--------------------------------------------------
+
+- ### What is remirepo
+
