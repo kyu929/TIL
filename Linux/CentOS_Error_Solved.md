@@ -19,7 +19,7 @@
    # /etc/skel/ 에서 .bash file들을 복사한다.
    # -rp 옵션을 주어 디렉토리 전체를 복사한다.
    root$ cp -rp /etc/skel /home/tibero
-   root$ chown -R tibero.dba /home/tibero
+   root$ chown -R tibero.dba /home/tibero (root$ chown -R USER.USERGROUP /home/directory)
    
    # 다시 계정에 접속하면 bash-4.2가 안나타나지만 간혹 계속 나타날 경우
    bash-4.2$ cd /home/tibero/skel
