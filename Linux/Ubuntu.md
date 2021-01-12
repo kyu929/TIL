@@ -1,4 +1,5 @@
 # Ubuntu
+- ### VMware에서 
 
 - ### ubuntu 방화벽(UFW) 설정
    
@@ -6,4 +7,17 @@
    
    - #### UFW 사용법
    
-       - #### UFW활성화/비활성화
+      - #### UFW활성화/비활성화
+        UFW는 기본 비활성화 상태이기에 이를 활성화 한다.
+        ```
+        sudo ufw enable
+        ```
+      - #### UFW 비활성화
+        ```
+        sudo ufw disable
+        ```
+      - #### UFW 상태확인
+        ```
+        sudo ufw status verbose
+        ```
+        
