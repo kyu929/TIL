@@ -3,7 +3,7 @@
 
 -------------------------------------------------------
 
-## 방화벽(UFW) 설정
+## 방화벽(UFW)
    
    우분투의 기본적인 방화벽은 UFW입니다. 이는 iptables를 좀더 쉽게 설정할 수 있도록 한 것인데 간단한 방화벽 구성에는 문제가 없지만 수준 높은 방화벽 구성에는 iptables 룰을 직접 사용해야 한다.
    
@@ -21,12 +21,68 @@
       - #### UFW 상태확인
         ```
         # sudo ufw status verbose
+        ```        
+        
+   - ### UFW 기본 룰   
+     
+     UFW에 설정되어 있는 기본 룰은 다음과 같다.
+     
+     들어오는 패킷에 대해서는 전부 거부(deny)   
+     나가는 패킷에 대해서는 전부 허가(allow) 
+      
+      - #### 기본 룰 확인
+        ```
+        # sudo ufw show raw
+        ```
+      - #### 기본 정책 차단
+        ```
+        # sudo ufw default deny
+        ```
+      - #### 기본 정책 허용
+        ```
+        # sudo ufw default allow
         ```
         
+   - ### UFW 기본 룰
+     
+      - #### UFW 허용
+        
+        sudo ufw allow <port>/<optional:protocoal>
+        
+        ```
+        ex) SSH 22 port allow (tcp/udp 22번 포트를 모두 허용)
+        # sudo ufw allow 22
+        
+        ex) 22 port tcp allow (ssh의 경우 tcp 22번 포트만 여는게 맞다)
+        # sudo ufw allow 22/tcp
+        
+        ex) 22 port udp allow
+        # sudo ufw allow 22/udp
+        ```   
+        
+     - #### UFW 차단   
+       
+       sudo ufw allow <port>/<optional:protocoal>
+       
+       ```
+       ex) SSH 22 port allow (tcp/udp 22번 포트를 모두 허용)
+       # sudo ufw allow 22
+       
+       ex) 22 port tcp allow (ssh의 경우 tcp 22번 포트만 여는게 맞다)
+       # sudo ufw allow 22/tcp
+       
+       ex) 22 port udp allow
+       # sudo ufw allow 22/udp
+       ```   
+     - #### UFW rule 삭제
+       ```
+       # sudo ufw delete deny 22/tcp
+       ```
+       
 --------------------------------------------------------------      
       
 ## Apache
-  - ### Apache SSL 적용  출처: https://webdir.tistory.com/228 [WEBDIR]
+  - ### Apache SSL 적용
     >- #### 인증서(전자서명)   
     >
     >  
@@ -142,7 +198,7 @@
     >  ```
     >  sudo service apache2 restart
     >  ```
-    >
+    >  출처 : https://webdir.tistory.com/228 [WEBDIR]
     
 <br>
 
