@@ -99,3 +99,10 @@ db.collection.insert()
 #example
 db.collection.insert({"key":"value", "key":{"key":"value", "key":["1","2"]}});
 ```
+
+## MongoDB Update
+db.collection.update()
+update시 $set을 쓰면 document 전체가 변경되지 않고 $set 부분만 변경 가능하다.
+```
+#example
+```
