@@ -21,6 +21,19 @@
       SQL> conn username/password or conn username/password@SID
       ```
       
+    - ### Tibero Table 정보 조회
+      
+      - #### Table Name 조회
+        ```
+        SELECT * FROM ALL_TAB_COMMENTS;
+        
+        SELECT * FROM ALL_TAB_COMMENTS WHERE TABLE_NAME = 'table_name';
+        ```
+      - #### Table colum Name 조회
+        ```
+        SELCT
+      
+      
       
   - ## Tibero Server Installation
 
