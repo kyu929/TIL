@@ -51,7 +51,7 @@
   
   - ## Tibero Apache
   
-    Tibero와 Apache 연동을 위해서 oci(Oracle Call Interface)를 사용하여 할 필요가 있다.
+    Tibero와 Apache 연동을 위해서 oci(Oracle Call Interface)를 사용하여 할 필요가 있다. (추후 검증 후 방법 작성)
   
   - ## Next
   
