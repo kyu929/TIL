@@ -24,15 +24,26 @@
     - ### Tibero Table 정보 조회
       
       - #### Table Name 조회
+        티베로 테이블명 조회
         ```
         SELECT * FROM ALL_TAB_COMMENTS;
         
-        SELECT * FROM ALL_TAB_COMMENTS WHERE TABLE_NAME = 'table_name';
+        SELECT * FROM ALL_TAB_COMMENTS WHERE TABLE_NAME = 'TABLE_NAME';
+        
+        (ex) SELECT * FROM ALL_TAB_COMMENTS WHERE TABLE_NAME = 'USERS';
         ```
-      - #### Table colum Name 조회
+      - #### Table column Name 조회
+        테이블명, 컬럼명, 컬럼 주석 확인 가능
         ```
-        SELCT
-      
+        SELECT * FROM ALL_COL_COMMENTS WHERE TABLE_NAME = 'TABLE_NAME';
+        ```
+        
+      - #### Table 상세정보 조회
+        테이블명, 컬럼명, 데이터타입, 컬럼수정자, 컬럼의 데이터타입 오너, 데이터 길이, NULLABLE, 컬럼ID, 열의 기본값 길이 등 확인 가능
+        ```
+        SELECT * FROM ALL_TAB_COLUMNS WHERE TABLE_NAME = 'TABLE_NAME';
+        ```
+        reference : https://domoyosi.tistory.com/6
       
       
   - ## Tibero Server Installation
