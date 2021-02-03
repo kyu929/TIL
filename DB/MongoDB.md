@@ -116,6 +116,7 @@ update시 $set을 쓰면 document 전체가 변경되지 않고 $set 부분만 �
     "data2" : "Good Morning",
     "data3" : "Good Afternoon"
 }
+WriteResult({ "nInserted" : 1 })
 
 > db.collection.update({"_id" : 123}, { $set : { "data.Hello" : "Bye", "data2" : Bye Bye" } } )
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModifed" : 1 })
