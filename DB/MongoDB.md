@@ -105,6 +105,7 @@ db.collection.update()
 update시 $set을 쓰면 document 전체가 변경되지 않고 $set 부분만 변경 가능하다.
 ```
 #example
+> db.clients.insert( {"_id":123, "lookup_key":123, "data":{"Hello":"Hi", "Bye":"GoodBye"}, "data2":"Good Morning", "data3":"Good Afternoon"} )
 {
     "_id" : 123,
     "lookup_key" : 123,
@@ -117,6 +118,9 @@ update시 $set을 쓰면 document 전체가 변경되지 않고 $set 부분만 �
 }
 
 > db.collection.update({"_id" : 123}, { $set : { "data.Hello" : "Bye", "data2" : Bye Bye" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModifed" : 1 })
+
+> db.collection.find().pretty()
 
 {
     "_id" : 123,
