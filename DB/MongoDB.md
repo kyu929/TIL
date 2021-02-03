@@ -105,4 +105,27 @@ db.collection.update()
 update시 $set을 쓰면 document 전체가 변경되지 않고 $set 부분만 변경 가능하다.
 ```
 #example
+{
+    "_id" : 123,
+    "lookup_key" : 123,
+    "data" : {
+                 "Hello" : "Hi",
+                 "Bye" : "GoodBye",
+    },
+    "data2" : "Good Morning",
+    "data3" : "Good Afternoon"
+}
+
+> db.collection.update({"_id" : 123}, { $set : { "data.Hello" : "Bye", "data2" : Bye Bye" } } )
+
+{
+    "_id" : 123,
+    "lookup_key" : 123,
+    "data" : {
+                 "Hello" : "Bye",
+                 "Bye" : "GoodBye",
+    },
+    "data2" : "Bye Bye",
+    "data3" : "Good Afternoon"
+}
 ```
