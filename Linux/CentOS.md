@@ -69,14 +69,19 @@ reference : https://byd0105.tistory.com/24
 
 - ### Apache
 
-80port 또는 443port가 열려 있음과 동시에 설정이 잘 되어 있어도 서버 접속이 되지 않는다면 방화벽을 한 번 확인하자 방화벽이 동작 중이면 접속이 안 될 수도 있다.
-
 방화벽을 끄던지 방화벽에서 port를 열어준다.
 
-- 방화벽 port열기
+- 방화벽 port 추가 및 서비스 추가
 ```
+# 80 포트 추가
 $ firewall-cmd --permanent --zone=public --add-port=80/tcp
+
+# http 서비스 추가
 $ firewall-cmd --reload
+$ systemctl restart firewalld
+
+# 방화벽 설정 목록
+$ firewall-cmd --list-all
 ```
 ---------------------------------------------------
 
