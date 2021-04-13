@@ -1,7 +1,7 @@
 Letter S
 ==========
 
-### ● SAML(Security Assertion Markup Language)
+- ### SAML(Security Assertion Markup Language)
 ```
 인증 정보 제공자(identity provider)와 서비스 제공자(service provider) 간의 인증 및 인가 데이터를 교환하기 위한 XML 기반의 개방형 표준
 데이터 포맷이다. 보안 어서션 마크업 언어, 보안 추가 마크업 언어라고도 한다. SAML이 기술하는 가장 중요한 요구사항은 웹 브라우저 통합 인증
@@ -17,7 +17,7 @@ OAUTH는 구글과 트위터에서 공동으로 개발한 SMAL보다 다소 새�
 reference : http://www.itworld.co.kr/news/108736
 ```
 
-### ● Session
+- ### Session
 ```
 웹 사이트의 여러 페이지에 걸쳐 사용되는 사용자 정보를 저장하는 방법을 의미합니다. 사용자가 브라우저를 닫아 서버와의 연결을 끝내는 시점까지
 를 세션이라고 합니다.
@@ -26,7 +26,7 @@ reference : http://www.itworld.co.kr/news/108736
 세선은 보안에 취약한 쿠키를 보완해주는 역할을 하고 있습니다.
 ```
 
-### ● Servlet(Java Servlet)
+- ### Servlet(Java Servlet)
 ```
 웹프로그래밍에서 클라이언트의 요청을 처리하고 그 결과를 다시 클라이언트에게 전송하는 Servlet 클래스의 구현 규칙을 지킨 자바 프로그래밍 
 기술
@@ -35,14 +35,14 @@ reference : http://www.itworld.co.kr/news/108736
 서블릿은 자바 코드 안에 HTML을 포함하고 있다는 차이점이 있다.
 ```
 
-### ● Singleton Pattern
+- ### Singleton Pattern
 ```
 소프트웨어 디자인 패턴에서 싱글턴 패턴을 따르는 클래스는, 생성자가 여러 차례 호출되더라도 실제로 생성되는 객체는 하나이고 최초 생성 이후에
 호출된 생성자는 최초의 생성자가 생성한 객체를 리턴한다. 이와 같은 디자인 유형을 싱글턴 패턴이라고 한다. 주로 공통된 객체를 여러개 생성해서
 사용하는 DBCP(DataBase Connection Pool)와 같은 상황에서 많이 사용된다.
 ```
 
-### ● SESSION
+- ### SESSION
 ```
 HTTP 세션은 해당 서버에 접근한 클라이언트를 식별하는 방법입니다. 세션은 클라이언트를 식별하기 위해 세션 ID라는 것을 사용합니다. 인증된 
 클라이언트에게만 발급되는 열쇠이다. 브라우저가 세션 ID를 가지고 있지 않은 상태에서 서버에 HTTP 요청을 보내면, 서버는 세션 ID를 새로 생성하고,
@@ -60,7 +60,7 @@ HTTP 세션은 해당 서버에 접근한 클라이언트를 식별하는 방법
  ● 웹 브라우저가 종료되면 세션 쿠키를 삭제한다.
 ```
 
-### ● Suspense
+- ### Suspense
 ```
 Suspense lets your components "wait" for something before they can render. In this example, two components wait for an asynchronous
 API call to fetch some data
@@ -78,4 +78,10 @@ Apache Config 중
 In computing, a symbolic link(also symlink or soft link) is a term for any file that contains a reference to another file or directory
 in the form of an absolute or relative path and that affects pathname resolution.
 
+```
+
+- ### SDN(Software-defined-networking)
+```
+SDN은 네트워크 성능 및 모니터링을 개선하기 위해 동적, 프로그래밍 방식으로 효율적인 네트워크 구성을 가능하게 하는 네트워크 관리에 대한 접근 방식이며,
+기존의 네트워크 관리보다 클라우드 컴퓨팅에 더 가깝다.
 ```
